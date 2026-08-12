@@ -18,7 +18,6 @@ scripts/core/achievement_manager.gd
 scripts/core/audio_system.gd
 scripts/core/camera_follow_3d.gd
 scripts/core/economy_manager.gd
-scripts/core/event_bus.gd
 scripts/core/game_manager.gd
 scripts/core/input_service.gd
 scripts/core/object_pool.gd
@@ -74,7 +73,6 @@ scripts/enemies/monster_data.gd
 scripts/enemies/shadow_3d.gd
 scripts/enemies/watcher_3d.gd
 scripts/environment/world_env.gd
-scripts/event_bus.gd
 scripts/final_night.gd
 scripts/fog_setup.gd
 scripts/fuse_box.gd
@@ -99,7 +97,6 @@ scripts/inventory/inventory_stats.gd
 scripts/inventory/item_data.gd
 scripts/inventory/item_database.gd
 scripts/inventory/item_pickup.gd
-scripts/item_database.gd
 scripts/level_01.gd
 scripts/levels/checkpoint.gd
 scripts/levels/level_02.gd

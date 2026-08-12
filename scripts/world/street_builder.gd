@@ -105,6 +105,7 @@ func _fill_roads() -> void:
 				if r.dir == "v":
 					t.basis = t.basis.rotated(Vector3.UP, PI * 0.5)
 				_road_mm.multimesh.set_instance_transform(idx, t)
+				_create_collision(t)
 				idx += 1
 
 func _fill_sidewalks() -> void:
@@ -126,6 +127,7 @@ func _fill_sidewalks() -> void:
 					if r.dir == "v":
 						t.basis = t.basis.rotated(Vector3.UP, PI * 0.5)
 					_sidewalk_mm.multimesh.set_instance_transform(idx, t)
+					_create_collision(t)
 					idx += 1
 
 func _fill_markings() -> void:
@@ -158,3 +160,13 @@ func _ensure_mm() -> void:
 		_marking_mm = MultiMeshInstance3D.new()
 		_marking_mm.name = "MarkingMM"
 		add_child(_marking_mm)
+
+func _create_collision(t: Transform3D) -> void:
+	var body := StaticBody3D.new()
+	var shape := CollisionShape3D.new()
+	var box := BoxShape3D.new()
+	box.size = Vector3(tile_size, 0.1, tile_size)
+	shape.shape = box
+	body.add_child(shape)
+	body.transform = t
+	add_child(body)
