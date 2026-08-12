@@ -116,7 +116,7 @@ func _final_integration() -> void:
 	for nm in checks:
 		if get_node_or_null(checks[nm]) != null:
 			ok += 1
-	var DB = load("res://scripts/item_database.gd")
+	var DB = load("res://scripts/inventory/item_database.gd")
 	if DB:
 		pass
 
